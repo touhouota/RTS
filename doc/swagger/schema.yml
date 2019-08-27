@@ -1,0 +1,7 @@
+openapi: 3.0.0
+info:
+  description: Rslのパス
+  version: 0.0.1
+  title: Rsl API
+  contact:
+    email: touhouota.register@gmail.com
