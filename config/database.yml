@@ -8,18 +8,18 @@ default: &default
 
 development:
   <<: *default
-  database: rss_database
-  username: <%= Rails.application.credentials.develop[:db_user] %>
-  password: <%= Rails.application.credentials.develop[:db_pass] %>
+  database: rss_development
+  username: <%= Rails.application.credentials.db[:develop][:user] %>
+  password: <%= Rails.application.credentials.db[:develop][:pass] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rss_database_test
-  username: <%= Rails.application.credentials.test[:db_user] %>
-  password: <%= Rails.application.credentials.test[:db_pass] %>
+  database: rss_test
+  username: <%= Rails.application.credentials.db[:test][:user] %>
+  password: <%= Rails.application.credentials.db[:test][:pass] %>
 #
 # production:
 #   <<: *default

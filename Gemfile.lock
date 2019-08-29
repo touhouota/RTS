@@ -74,13 +74,6 @@ GEM
       xpath (~> 3.2)
     childprocess (1.0.1)
       rake (< 13.0)
-    coffee-rails (4.2.2)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     committee (3.1.0)
       json_schema (~> 0.14, >= 0.14.3)
       openapi_parser (>= 0.2.2)
@@ -273,7 +266,6 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
-  coffee-rails (~> 4.2)
   committee
   committee-rails
   factory_bot_rails
