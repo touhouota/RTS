@@ -2,7 +2,7 @@ version: 2
 jobs:
   rubocop:
     docker:
-      - image: circleci/ruby:2.6.3-node-browsers-legacy
+      - image: circleci/ruby:2.6.4-node-browsers-legacy
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
@@ -42,7 +42,7 @@ jobs:
 
   rspec:
     docker:
-      - image: circleci/ruby:2.6.3-node-browsers-legacy
+      - image: circleci/ruby:2.6.4-node-browsers-legacy
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
