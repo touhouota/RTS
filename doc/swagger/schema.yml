@@ -25,5 +25,7 @@ components:
     UserTimeSeparator:
       type: object
       properties:
-        separated_at:
+        id:
+          type: string
+        separator:
           type: integer
