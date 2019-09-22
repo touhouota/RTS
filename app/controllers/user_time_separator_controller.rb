@@ -1,0 +1,2 @@
+class UserTimeSeparatorController < ApplicationController
+end
