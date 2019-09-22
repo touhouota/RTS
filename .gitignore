@@ -24,3 +24,6 @@
 /config/master.key
 
 vendor
+/config/credentials/developmeny.key
+
+/config/credentials/development.key
