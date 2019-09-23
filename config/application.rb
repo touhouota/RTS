@@ -39,8 +39,14 @@ module RTS
       g.skip_routes false        # trueなら routes.rb変更せず
       g.helper false             # ヘルパー生成せず
       g.template_engine :slim
-      g.test_framework :rspec, fixture: true   # テストフレームワークはrspecを使用の場合
-      g.fixture_replacement :factory_bot, dir: "spec/factories"  # fixtureはfactory_botでディレクトリを変更
+      g.test_framework :rspec,
+        fixtures: true,
+        request_specs: true,
+        view_specs: false,
+        helper_specs: false,
+        routing_specs: false,
+        controller_specs: false
+      g.fixture_replacement :factory_bot, dir: "spec/factories"
     end
   end
 end
