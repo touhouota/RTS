@@ -1,11 +1,11 @@
-# frozen_string_literal: true
-
-module UserCreatable
-  def user
-    @user ||= create(:user)
-  end
-end
-
 RSpec.configure do |config|
-  config.include UserCreatable, :with_user
+  if config.filter.rules[:with_user]
+    config.before :example do
+      puts "with_user"
+    end
+  else
+    config.before :example do
+      puts "without_user"
+    end
+  end
 end
