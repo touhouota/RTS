@@ -1,11 +1,4 @@
-RSpec.configure do |config|
-  if config.filter.rules[:with_user]
-    config.before :example do
-      puts "with_user"
-    end
-  else
-    config.before :example do
-      puts "without_user"
-    end
-  end
+RSpec.shared_context "With User Spec" do
+  let(:user) { create(:user) }
+  puts "create user"
 end
