@@ -33,5 +33,14 @@ module RTS
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.generators do |g|
+      g.assets false             # CSS/JSファイル生成せず
+      g.skip_routes false        # trueなら routes.rb変更せず
+      g.helper false             # ヘルパー生成せず
+      g.template_engine :slim
+      g.test_framework :rspec, fixture: true   # テストフレームワークはrspecを使用の場合
+      g.fixture_replacement :factory_bot, dir: "spec/factories"  # fixtureはfactory_botでディレクトリを変更
+    end
   end
 end
