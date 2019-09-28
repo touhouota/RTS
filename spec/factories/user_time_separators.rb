@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :user_time_separator do
-    separator { Time.current.to_i }
+    separated_at { Time.current }
   end
 end
