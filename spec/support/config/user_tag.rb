@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
-RSpec.shared_context "With User Spec" do
-  let(:user) { create(:user) }
-  puts "create user"
+module UserCreatable
+  def user
+    @user ||= create(:user)
+  end
+end
+
+RSpec.configure do |config|
+  config.include UserCreatable, :with_user
 end
