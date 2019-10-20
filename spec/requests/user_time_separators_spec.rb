@@ -4,7 +4,7 @@ require "rails_helper"
 
 RSpec.describe "UserTimeSeparators", :with_user, type: :request do
   describe "GET /user_time_separators" do
-    subject { get user_time_separators_path }
+    subject { get api_user_time_separators_path }
 
     let(:create_size) { 1 }
 
