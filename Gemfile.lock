@@ -64,6 +64,10 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.0)
+    better_errors (2.5.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
@@ -81,6 +85,7 @@ GEM
       activesupport
     childprocess (2.0.0)
       rake (< 13.0)
+    coderay (1.1.2)
     committee (3.2.1)
       json_schema (~> 0.14, >= 0.14.3)
       openapi_parser (>= 0.6.1)
@@ -275,6 +280,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  better_errors
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
