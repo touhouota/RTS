@@ -24,3 +24,5 @@
 /config/master.key
 
 vendor
+
+node_modules
