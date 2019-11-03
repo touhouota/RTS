@@ -5,6 +5,8 @@ info:
   title: RTS API
   contact:
     email: touhouota.register@gmail.com
+servers:
+  - url: https://shikiyura.com/api
 paths:
   /user_time_separator:
     get:
@@ -20,6 +22,22 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/UserTimeSeparator"
+    post:
+      tags:
+        - user_time_separator
+      description: クリックしたタイミングを保存する
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserTimeSeparator"
+      responses:
+        200:
+          description: 成功時
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserTimeSeparator"
 components:
   schemas:
     UserTimeSeparator:

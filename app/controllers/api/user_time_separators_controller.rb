@@ -5,5 +5,15 @@ module Api
     def index
       render json: current_user.user_time_separators
     end
+
+    def create
+      user_time_separator = current_user.user_time_separators.create!(permited_params)
+      render json: user_time_separator
+    end
+
+    private
+      def permited_params
+        params.permit(:separated_at)
+      end
   end
 end

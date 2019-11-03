@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-module UserCreatable
+RSpec.shared_context "with User object", :with_user do
   def user
-    @user ||= create(:user)
+    create(:user)
   end
 end
-
+#
 RSpec.configure do |config|
-  config.include UserCreatable, :with_user
+  config.include_context "with User object", :with_user
 end
