@@ -38,7 +38,7 @@ RSpec.describe "UserTimeSeparators", :with_user, type: :request do
   describe "POST /user_time_separator" do
     subject { post api_user_time_separators_path, params: params }
 
-    let(:params) { { separated_at: now } }
+    let(:params) { { user_time_separator: { separated_at: now } } }
     let(:now) { Time.current.to_i }
 
     before do

@@ -12,13 +12,12 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "parcel": "^1.12.4",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-bundle-manifest": "^0.2.0",
     "typescript": "^3.6.4"
   },
   "scripts": {
-    "parcel:dev": "parcel watch --out-dir public/packs --public-url /packs $npm_package_inputs"
+    "parcel:dev": "parcel --out-dir public/packs --public-url /packs $npm_package_inputs"
   },
-  "inputs": "app/javascript/packs/**.js"
+  "inputs": "app/javascript/packs/*.js"
 }

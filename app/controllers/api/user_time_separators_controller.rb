@@ -13,7 +13,7 @@ module Api
 
     private
       def permited_params
-        params.permit(:separated_at)
+        params.require(:user_time_separator).permit(:separated_at)
       end
   end
 end

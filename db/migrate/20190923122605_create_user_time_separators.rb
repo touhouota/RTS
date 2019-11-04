@@ -3,8 +3,8 @@
 class CreateUserTimeSeparators < ActiveRecord::Migration[6.0]
   def change
     create_table :user_time_separators, id: :bigint do |t|
-      t.integer :separated_at
-      t.bigint :user_id
+      t.integer :separated_at, unsigned: true, null: false
+      t.bigint :user_id, unsigned: true, null: false
 
       t.timestamps
     end

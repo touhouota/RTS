@@ -44,4 +44,4 @@ components:
       type: object
       properties:
         separated_at:
-          type: integer
+          type: string
