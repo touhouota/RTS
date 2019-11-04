@@ -13,7 +13,8 @@ gem "sassc-rails"
 gem "uglifier", ">= 1.3.0"
 # gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
-gem "jbuilder", "~> 2.5"
+# gem "jbuilder", "~> 2.5"
+gem "active_model_serializers"
 gem "rubocop", ">= 0.47", require: false
 gem "rubocop-performance", require: false
 gem "rubocop-rails", require: false
@@ -31,11 +32,12 @@ gem "simpacker"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 
-gem "slim"
+gem "slim-rails"
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec"
   gem "rspec-rails", "~> 3.8"
   gem "factory_bot_rails"
   gem "committee"
@@ -50,7 +52,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "rspec"
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :test do
@@ -59,6 +62,7 @@ group :test do
   gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem "webdrivers"
+  gem "database_cleaner"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

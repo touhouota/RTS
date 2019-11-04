@@ -23,4 +23,11 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-vendor
+/vendor
+
+/config/credentials/development.key
+/config/credentials/test.key
+
+/node_modules
+/.cache
+/public/packs
