@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_23_122605) do
+ActiveRecord::Schema.define(version: 2019_11_08_042137) do
   create_table "user_time_separators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "separated_at", null: false, unsigned: true
     t.bigint "user_id", null: false, unsigned: true
