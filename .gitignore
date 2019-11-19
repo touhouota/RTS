@@ -31,3 +31,4 @@
 /node_modules
 /.cache
 /public/packs
+/config/global/*.yml
