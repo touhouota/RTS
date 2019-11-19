@@ -30,7 +30,7 @@ jobs:
             sudo gem install --force bundler
       - run:
           name: bundle install
-          command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+          command: bundle install --jobs=4 --retry=3 --clean --path vendor/bundle
       - save_cache:
           paths:
             - ./vendor/bundle
@@ -72,7 +72,7 @@ jobs:
             sudo gem update --system
             sudo gem uninstall bundler
             sudo gem install --force bundler
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - run: bundle install --jobs=4 --retry=3 --clean --path vendor/bundle
       - run: yarn install
       - save_cache:
           paths:
