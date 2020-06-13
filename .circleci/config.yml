@@ -2,11 +2,11 @@ version: 2
 jobs:
   rubocop:
     docker:
-      - image: circleci/ruby:2.6.5-node-browsers-legacy
+      - image: circleci/ruby:2.7.1-node-browsers-legacy
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
-      - image: circleci/mysql:8.0
+      - image: circleci/mysql:8.0.20
         environment:
           MYSQL_USER: root
           MYSQL_DB: app_test
@@ -42,11 +42,11 @@ jobs:
 
   rspec:
     docker:
-      - image: circleci/ruby:2.6.5-node-browsers-legacy
+      - image: circleci/ruby:2.7.1-node-browsers-legacy
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
-      - image: circleci/mysql:8.0.17
+      - image: circleci/mysql:8.0.20
         command: mysqld --default-authentication-plugin=mysql_native_password
         environment:
           MYSQL_USER: root

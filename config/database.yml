@@ -9,10 +9,8 @@ default: &default
 development:
   <<: *default
   database: rts_develop
-  # username: <%= Rails.application.credentials.db[:develop][:user] %>
-  # password: <%= Rails.application.credentials.db[:develop][:pass] %>
-  username: rts_user
-  password: rts_pass
+  username: <%= Rails.application.credentials.db[:develop][:user] %>
+  password: <%= Rails.application.credentials.db[:develop][:pass] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
