@@ -121,7 +121,7 @@ GEM
     faraday (0.17.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.11.3)
-    foreman (0.86.0)
+    foreman (0.87.1)
     global (1.1.0)
       activesupport (>= 2.0)
     globalid (0.4.2)
