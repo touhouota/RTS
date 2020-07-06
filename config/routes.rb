@@ -6,5 +6,10 @@ Rails.application.routes.draw do
     resources :user_time_separators, only: [:index, :create]
   end
 
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/login", to: "sessions#destroy"
+  get "/signup", to: "users#new"
+
   resources :user_time_separators
 end
