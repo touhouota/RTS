@@ -154,7 +154,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    openapi_parser (0.11.2)
+    openapi_parser (0.12.1)
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
