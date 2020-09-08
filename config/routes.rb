@@ -3,13 +3,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :api do
+    resources :sessions, only: [:create]
     resources :user_time_separators, only: [:index, :create]
   end
 
-  get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
-  delete "/login", to: "sessions#destroy"
-  get "/signup", to: "users#new"
-
   resources :user_time_separators
+
+  resources :login, only: [:index]
 end
