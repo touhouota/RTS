@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_12_15_003356) do
 
-  create_table "user_time_separators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "user_time_separators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_ja_0900_as_cs", force: :cascade do |t|
     t.integer "separated_at", null: false, unsigned: true
     t.bigint "user_id", null: false, unsigned: true
     t.datetime "created_at", precision: 6, null: false
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_12_15_003356) do
     t.index ["id", "user_id"], name: "index_user_time_separators_on_id_and_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_ja_0900_as_cs", force: :cascade do |t|
     t.string "name", null: false
     t.string "pw", null: false
     t.datetime "created_at", precision: 6, null: false
