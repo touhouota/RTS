@@ -1,14 +1,2 @@
 h1 Sessions#new
-
-= form_for(:session, url: login_path) do |f|
-  = f.label :email
-  = f.email_field :email, class: "form-control"
-
-  = f.label :password
-  = f.password_field :password, class: "form-control"
-
-  = f.submit "log in", class: "btn btn-primary"
-
-p
-  New User?
-  = link_to "Sign up now!", signup_path
+p Find me in app/views/sessions/new.html.slim
