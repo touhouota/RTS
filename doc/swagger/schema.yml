@@ -8,6 +8,22 @@ info:
 servers:
   - url: https://shikiyura.com/api
 paths:
+  /login:
+    post:
+      tags:
+        - login
+      description: ログイン時にたたかれるAPI
+      requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoginInformation"
+      responses:
+        200:
+          description: 成功
+        401:
+          description: 入力が正しくない
+
   /user_time_separator:
     get:
       tags:
@@ -45,3 +61,9 @@ components:
       properties:
         separated_at:
           type: string
+    LoginInformation:
+      type: object
+      properties:
+        name:
+          type: string
+        pw: string

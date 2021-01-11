@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   private
     def current_user
       # TODO: リクエストしてきたユーザidをもとにuserを取得
-      # return unless session[:user_id]
-      # @current_user ||= User.find(session[:user_id])"
-      @current_user ||= User.last
+      return unless session[:user_id]
+      @current_user ||= User.find(session[:user_id])
+      # @current_user ||= User.last
     end
 
     def set_raven_context
