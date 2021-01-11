@@ -3,12 +3,12 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.1"
+ruby "2.7.2"
 
 gem "rails", "~> 6.0.3"
 # gem "sqlite3"
 gem "mysql2"
-gem "puma", "~> 5.0"
+gem "puma", "~> 5.1"
 gem "sassc-rails"
 gem "uglifier", ">= 1.3.0"
 # gem "coffee-rails", "~> 4.2"
